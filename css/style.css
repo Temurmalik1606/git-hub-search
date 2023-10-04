@@ -1,0 +1,303 @@
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+  }
+  
+  body {
+    color: hsl(217, 35%, 45%);
+    background-color: hsl(227, 100%, 98%);
+    transition: background-color 1s ease-in-out;
+  }
+  
+  .container-wrapper {
+    min-height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 50%;
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+  }
+  .header .title{
+    color: #222731;
+  }
+  
+  .btn-mode {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .btn-mode:hover, .search-btn:hover {
+    cursor: pointer;
+  }
+
+  .user-not-found {
+    display: none;
+  
+    position: absolute;
+    right: 0;
+    top: 32px;
+  
+    color: red;
+    font-weight: bold;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+  
+    padding: 8px;
+    border-radius: 16px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: hsla(227, 46%, 50%, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .search-icon {
+    margin: 0 32px;
+  }
+  
+  .search-area {
+    width: 100%;
+  
+    font-size: 18px;
+    color: hsl(217, 35%, 45%);
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .search-area::placeholder {
+    color: hsl(217, 35%, 45%);
+  
+  }
+  
+  .search-btn {
+    padding: 12px;
+    margin-left: 16px;
+    font-size: 16px;
+    background-color: hsl(212, 100%, 50%);
+    border: none;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+  }
+  
+  .search-btn:hover {
+    background-color: hsl(212, 100%, 69%);
+  }
+
+  .user-information-container {
+    display: flex;
+    gap: 32px;
+  
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: hsla(227, 46%, 50%, 0.2);
+    background-color: hsl(0, 0%, 100%);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  
+  .profile-information {
+    width: 100%;
+  }
+  
+  .user-basic-detail {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .mobile-user-img{
+    display: none;
+  }
+  
+  .user-name-container {
+    width: 100%;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .user-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: hsl(217, 21%, 21%);
+  }
+  
+  .joined-date-continer {
+    padding-top: 10px;
+  
+    display: flex;
+    gap: 8px;
+  }
+  
+  .user-id {
+    color: hsl(212, 100%, 50%);
+    text-decoration: none;
+  }
+  
+  .user-bio {
+    line-height: 24px;
+    opacity: 0.75;
+    margin-top: 24px;
+  }
+  
+  .user-work-information {
+    display: flex;
+    justify-content: space-between;
+  
+    margin: 32px 0;
+    padding: 17px 32px;
+    border-radius: 16px;
+    background-color: hsl(227, 100%, 98%);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .repos, .followers, .following {
+    font-size: 22px;
+    font-weight: bold;
+    color: hsl(217, 21%, 21%);
+    margin-top: 10px;
+  }
+  
+  .user-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .user-links > div {
+    width: 48%;
+  }
+  
+  .user-location, 
+  .user-website-link,
+  .user-twitter-link,
+  .user-company {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    word-break: break-all;
+  }
+  
+  .user-location,
+  .user-twitter-link {
+    margin-bottom: 16px;
+  }
+  
+  .user-website-link a, .user-twitter-link a {
+    text-decoration: none;
+    color: hsl(217, 35%, 45%);
+  }
+  
+  .link-color {
+    color: hsl(217, 35%, 45%);
+  }
+  
+  @media screen and (max-width: 1200px) {
+  
+    .container {
+      width: 70%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 850px) {
+  
+    .mobile-user-img {
+      display: block;
+    }
+  
+    .user-name-container {
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+  
+    .joined-date-continer {
+      padding: 0;
+    }
+  
+    .user-profile-img-container {
+      display: none;
+    }
+    
+  }
+  
+  @media screen and (max-width: 650px) {
+  
+    body {
+      font-size: 13px;
+    }
+  
+    .container {
+      width: 90%;
+    }
+  
+    .search-icon {
+      margin: 0 8px 0 0;
+    }
+  
+    .search-area {
+      font-size: 13px;
+    }
+  
+    .search-btn {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    .user-information-container {
+      padding: 16px;
+    }
+  
+    .profile-img {
+      max-height: 64px;
+    }
+    
+    .user-basic-detail {
+      gap: 16px;
+    }
+  
+    .user-name-container {
+      gap: 0;
+    }
+  
+    .user-name {
+      font-size: 20px;
+    }
+  
+    .user-work-information {
+      padding: 16px;
+      justify-content: space-around;
+    }
+  
+    .repos, .followers, .following {
+      font-size: 18px;
+    }
+  
+    .user-links {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+  }
